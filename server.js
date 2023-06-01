@@ -15,7 +15,7 @@ function ballsToOvers(balls) {
   return `${overs}.${remainingBalls}`;
 }
 
-const connection = mysql2.createConnection({
+const connection = mysql2.createPool({
   host: "sql.freedb.tech",
   user: "freedb_Happy",
   password: "4MzjpaYF8@N&Zkf",
