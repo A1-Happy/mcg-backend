@@ -24,13 +24,13 @@ const connection = mysql2.createPool({
 
 const query = util.promisify(connection.query).bind(connection);
 
-connection.connect((error) => {
-  if (error) {
-    console.log("Error connecting to database:", error);
-  } else {
-    console.log("Connected to database successfully");
-  }
-});
+// connection.connect((error) => {
+//   if (error) {
+//     console.log("Error connecting to database:", error);
+//   } else {
+//     console.log("Connected to database successfully");
+//   }
+// });
 
 const getCurrentBattingTeam = async (matchId) => {
   const match = await query("SELECT * FROM matches WHERE id = ?", [matchId]);
